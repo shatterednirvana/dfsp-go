@@ -1,0 +1,19 @@
+This program is an implementation of the DFSP SSA
+(http://www.cs.ucsb.edu/~cse/Files/DFSP.pdf) in the Go programming language.
+Compile it with 'make'.
+
+To run: ./6.out
+To run and collect profiling info: ./6.out -cpuprofile=dfsp.prof
+
+Right now the code is in 'testing' mode, where it only runs one reaction. This
+makes it a lot easier to collect profiling info. To make it run all reactions
+it needs to run, open 'dfspsolver.go' and change these lines:
+
+        //for t < tFinal {
+        for t < 1 {
+
+to:
+
+        for t < tFinal {
+        //for t < 1 {
+
